@@ -1,0 +1,387 @@
+Attribute VB_Name = "Module6"
+Sub BS_Hedge()
+Attribute BS_Hedge.VB_ProcData.VB_Invoke_Func = "b\n14"
+'
+' BS_Hedge Macro
+'
+' Keyboard Shortcut: Ctrl+b
+'
+    Rows("1:11").Select
+    Selection.Delete Shift:=xlUp
+    Range("A:A,B:B").Select
+    Range("B1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Range("Z1").Select
+    ActiveCell.FormulaR1C1 = "S"
+    Range("Z3").Select
+    ActiveCell.FormulaR1C1 = "=R[-1]C"
+    Range("Z3").Select
+    Selection.AutoFill Destination:=Range("Z3:Z5000"), Type:=xlFillDefault
+    Range("Z3:Z5000").Select
+    Range("Z3:Z5000").Select
+    ActiveCell.FormulaR1C1 = "=R[-1]C"
+    Range("AA1").Select
+    ActiveCell.FormulaR1C1 = "RFR"
+    Range("AB1").Select
+    ActiveCell.FormulaR1C1 = "TTM"
+    Range("AA2").Select
+    ActiveCell.FormulaR1C1 = "0.08"
+    Range("AA2").Select
+    ActiveCell.FormulaR1C1 = "0.08"
+    Range("AA2").Select
+    ActiveCell.FormulaR1C1 = "0.05"
+    Range("AA3").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=R[-1]C"
+    Range("AA3").Select
+    Selection.AutoFill Destination:=Range("AA3:AA5000"), Type:=xlFillDefault
+    Range("AA3:AA5000").Select
+    Range("AB2").Select
+    ActiveCell.FormulaR1C1 = "=(RC[-16]-TODAY())/365"
+    Columns("AB:AB").Select
+    Selection.NumberFormat = "0.00"
+    Selection.NumberFormat = "0.000"
+    Selection.NumberFormat = "0.0000"
+    Range("AB2").Select
+    Selection.AutoFill Destination:=Range("AB2:AB5000"), Type:=xlFillDefault
+    Range("AB2:AB5000").Select
+    Range("AD1").Select
+    ActiveCell.FormulaR1C1 = "C__ "
+    Range("AD1").Select
+    ActiveCell.FormulaR1C1 = "C __ "
+    Range("AE1").Select
+    ActiveCell.FormulaR1C1 = "P __ "
+    Range("AF1").Select
+    ActiveCell.FormulaR1C1 = "SUM __ "
+    Range("AG1").Select
+    ActiveCell.FormulaR1C1 = "NET __ "
+    Range("AD2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-27]*2*RC[-25]"
+    Range("AD2").Select
+    Selection.AutoFill Destination:=Range("AD2:AD5000"), Type:=xlFillDefault
+    Range("AD2:AD5000").Select
+    Range("AE2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=2*RC[-11]*RC[-9]"
+    Range("AE2").Select
+    Selection.AutoFill Destination:=Range("AE2:AE5000"), Type:=xlFillDefault
+    Range("AE2:AE5000").Select
+    Range("AF2").Select
+    Range("AF2").Select
+    Selection.AutoFill Destination:=Range("AF2:AF5000"), Type:=xlFillDefault
+    Range("AF2:AF5000").Select
+    Range("AG2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-3]-RC[-2]"
+    Range("AG2").Select
+    Selection.AutoFill Destination:=Range("AG2:AG5000"), Type:=xlFillDefault
+    Range("AG2:AG5000").Select
+    Columns("Z:Z").Select
+    Selection.Insert Shift:=xlToRight
+    Range("Z1").Select
+    ActiveCell.FormulaR1C1 = "C IV"
+    Columns("Z:Z").Select
+    Selection.Insert Shift:=xlToRight
+    Range("AA1").Select
+    ActiveCell.FormulaR1C1 = "C IV"
+    Range("Z2").Select
+    ActiveCell.FormulaR1C1 = "=IF(RC[-19]=""--"",RC[-2],RC[-19])"
+    Range("Z2").Select
+    Selection.AutoFill Destination:=Range("Z2:Z5000"), Type:=xlFillDefault
+    Range("Z2:Z5000").Select
+    Range("AA2").Select
+    ActiveCell.Formula2R1C1 = "P IV"
+    Range("AA2").Select
+    ActiveCell.FormulaR1C1 = "=IF(RC[-3]=""--"",RC[-20],RC[-3])"
+    Range("AA2").Select
+    Selection.AutoFill Destination:=Range("AA2:AA5000"), Type:=xlFillDefault
+    Range("AA2:AA5000").Select
+    Range("AK1").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("AK1").Select
+    ActiveCell.FormulaR1C1 = "C D1"
+    Range("AL1").Select
+    ActiveCell.FormulaR1C1 = "C D2"
+    Range("AM1").Select
+    ActiveCell.FormulaR1C1 = "N D1"
+    Range("AN1").Select
+    ActiveCell.FormulaR1C1 = "N D2"
+    Range("AN1").Select
+    ActiveCell.FormulaR1C1 = "C N D2"
+    Range("AM1").Select
+    ActiveCell.FormulaR1C1 = "C N D1"
+    Range("AP1").Select
+    ActiveCell.FormulaR1C1 = "C BS Price"
+    Range("AQ1").Select
+    ActiveCell.FormulaR1C1 = "Diff"
+    Range("AR1").Select
+    ActiveCell.FormulaR1C1 = "C BS _ "
+    Range("AS1").Select
+    ActiveCell.FormulaR1C1 = "C BS _ "
+    Range("AU1").Select
+    ActiveCell.FormulaR1C1 = "P D1"
+    Range("AV1").Select
+    ActiveCell.FormulaR1C1 = "P D2"
+    Range("AW1").Select
+    ActiveCell.FormulaR1C1 = "P N D1"
+    Range("AX1").Select
+    ActiveCell.FormulaR1C1 = "P N D2"
+    Range("AU1").Select
+    ActiveCell.FormulaR1C1 = "P D1"
+    Range("AY1").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("AZ1").Select
+    ActiveCell.FormulaR1C1 = "P BS Price"
+    Range("BA1").Select
+    ActiveCell.FormulaR1C1 = "PP Diff"
+    Range("BA1").Select
+    ActiveCell.FormulaR1C1 = "P Diff"
+    Range("BB1").Select
+    ActiveCell.FormulaR1C1 = "P BS _ "
+    Range("BC1").Select
+    ActiveCell.FormulaR1C1 = "P BS _ "
+    Range("AK2").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("G2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=(LN(RC[-9]/RC[-24])+RC[-8]*RC[-7])/(RC[-11]*SQRT(RC[-7])+RC[-11]*SQRT(RC[-7])/2)"
+    Range("AM2").Select
+    ActiveCell.Formula2R1C1 = "=NORMS"
+    Range("AM2").Select
+    ActiveCell.FormulaR1C1 = "=NORMSDIST(RC[-2])"
+    Range("AL2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-1]-(RC[-12]*SQRT(RC[-8]))"
+    Range("AK2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=(LN(RC[-9]/RC[-24])+RC[-8]*RC[-7])/(RC[-11]*SQRT(RC[-7])+RC[-11]*SQRT(RC[-7])/2)"
+    Range("AK2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=((LN(RC[-9]/RC[-24])+RC[-8]*RC[-7])/(RC[-11]*SQRT(RC[-7])))+(0.5*RC[-11]*SQRT(RC[-7]))"
+    Range("AM3").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("AN2").Select
+    ActiveCell.FormulaR1C1 = "=NORMSDIST(RC[-2])"
+    Range("AK2").Select
+    Selection.AutoFill Destination:=Range("AK2:AK5000"), Type:=xlFillDefault
+    Range("AK2:AK5000").Select
+    Range("AL2").Select
+    Selection.AutoFill Destination:=Range("AL2:AL5000"), Type:=xlFillDefault
+    Range("AL2:AL5000").Select
+    Range("AM2").Select
+    Selection.AutoFill Destination:=Range("AM2:AM5000"), Type:=xlFillDefault
+    Range("AM2:AM5000").Select
+    Range("AN2").Select
+    Selection.AutoFill Destination:=Range("AN2:AN5000"), Type:=xlFillDefault
+    Range("AN2:AN5000").Select
+    Range("AP2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-14]*RC[-3]-RC[-29]*EXP(-RC[-13]*RC[-12])*RC[-2]"
+    Selection.AutoFill Destination:=Range("AP2:AP5000"), Type:=xlFillDefault
+    Range("AP2:AP5000").Select
+    Range("AQ2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-1]-RC[-42]"
+    Selection.AutoFill Destination:=Range("AQ2:AQ5000"), Type:=xlFillDefault
+    Range("AQ2:AQ5000").Select
+    Columns("A:A").Select
+    Selection.NumberFormat = "#,##0.0"
+    Selection.NumberFormat = "#,##0.00"
+    Selection.NumberFormat = "#,##0.0"
+    Selection.NumberFormat = "#,##0.00"
+    Range("AQ2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-1]-RC[-42]"
+    Range("AQ2").Select
+    Selection.NumberFormat = "#,##0.0"
+    Selection.NumberFormat = "#,##0.00"
+    Selection.NumberFormat = "#,##0.000"
+    Columns("AQ:AQ").Select
+    Selection.NumberFormat = "0.00"
+    Selection.NumberFormat = "0.000"
+    Selection.NumberFormat = "0.00"
+    Columns("AP:AP").Select
+    Selection.Style = "Currency"
+    Selection.NumberFormat = "_($* #,##0.0_);_($* (#,##0.0);_($* ""-""??_);_(@_)"
+    Selection.NumberFormat = "_($* #,##0.00_);_($* (#,##0.00);_($* ""-""??_);_(@_)"
+    Selection.NumberFormat = _
+        "_($* #,##0.000_);_($* (#,##0.000);_($* ""-""??_);_(@_)"
+    Range("AR2").Select
+    ActiveCell.FormulaR1C1 = "=MAX(0,RC[-5])"
+    Range("AR2").Select
+    Selection.AutoFill Destination:=Range("AR2:AR5000"), Type:=xlFillDefault
+    Range("AR2:AR5000").Select
+    Range("AS3").Select
+    Selection.Cut Destination:=Range("AS2")
+    Range("AR2").Select
+    ActiveCell.FormulaR1C1 = "=MIN(1,MAX(0,RC[-5]))"
+    Range("AR2").Select
+    Selection.AutoFill Destination:=Range("AR2:AR5000"), Type:=xlFillDefault
+    Range("AR2:AR5000").Select
+    Range("AS2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=MIN(1,MAX(0,(1/SQRT(2*PI()))*EXP(-0.5*RC[-8]*RC[-8])*1/(RC[-17]*RC[-19]*SQRT(RC[-15]))))"
+    Range("AS2").Select
+    Selection.AutoFill Destination:=Range("AS2:AS5000"), Type:=xlFillDefault
+    Range("AS2:AS5000").Select
+    Range("AU2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=((LN(RC[-19]/RC[-34])+RC[-18]*RC[-17])/(RC[-20]*SQRT(RC[-17])))+(0.5*RC[-20]*SQRT(RC[-17]))"
+    Selection.AutoFill Destination:=Range("AU2:AU5000"), Type:=xlFillDefault
+    Range("AU2:AU5000").Select
+    Range("AV2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-1]-(RC[-21]*SQRT(RC[-18]))"
+    Range("AV2").Select
+    Selection.AutoFill Destination:=Range("AV2:AV5000"), Type:=xlFillDefault
+    Range("AV2:AV5000").Select
+    Range("AW2").Select
+    ActiveCell.FormulaR1C1 = "=+NORMSDIST(RC[-2])"
+    Range("AW2").Select
+    ActiveCell.FormulaR1C1 = "=NORMSDIST(RC[-2])-1"
+    Range("AW2").Select
+    ActiveCell.FormulaR1C1 = "=NORMSDIST(RC[-2])"
+    Range("AW2").Select
+    Selection.AutoFill Destination:=Range("AW2:AW5000"), Type:=xlFillDefault
+    Range("AW2:AW5000").Select
+    Range("AX2").Select
+    ActiveCell.FormulaR1C1 = "=NORMSDIST(RC[-2])"
+    Range("AX2").Select
+    Selection.AutoFill Destination:=Range("AX2:AX5000"), Type:=xlFillDefault
+    Range("AX2:AX5000").Select
+    Range("AZ2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=RC[-24]*(RC[-3]-1)+RC[-39]*(EXP(-RC[-23]*RC[-22]))*(1-RC[-2])"
+    Range("AZ2").Select
+    Selection.AutoFill Destination:=Range("AZ2:AZ13"), Type:=xlFillDefault
+    Range("AZ2:AZ5000").Select
+    Columns("AZ:AZ").Select
+    ActiveCell.FormulaR1C1 = "P BS Price"
+    Range("AZ2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=MAX(0.01,RC[-24]*(RC[-3]-1)+RC[-39]*(EXP(-RC[-23]*RC[-22]))*(1-RC[-2]))"
+    Range("AZ2").Select
+    Selection.AutoFill Destination:=Range("AZ2:AZ5000"), Type:=xlFillDefault
+    Range("AZ2:AZ5000").Select
+    Columns("AP:AP").Select
+    Selection.NumberFormat = "0.00"
+    Range("AP2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=MAX(0.01,RC[-14]*RC[-3]-RC[-29]*EXP(-RC[-13]*RC[-12])*RC[-2])"
+    Range("AP2").Select
+    Selection.AutoFill Destination:=Range("AP2:AP5000"), Type:=xlFillDefault
+    Range("AP2:AP5000").Select
+    Range("BA2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-1]-RC[-35]"
+    Columns("AZ:AZ").Select
+    Selection.NumberFormat = "0.00"
+    Selection.NumberFormat = "0.000"
+    Selection.NumberFormat = "0.00"
+    Selection.NumberFormat = "0.000"
+    Range("BA2").Select
+    Selection.AutoFill Destination:=Range("BA2:BA5000"), Type:=xlFillDefault
+    Range("BA2:BA5000").Select
+    Range("BB2").Select
+    ActiveCell.FormulaR1C1 = "=MIN(1,MAX(0,RC[-5]-1))"
+    Range("BB2").Select
+    Selection.AutoFill Destination:=Range("BB2:BB5000"), Type:=xlFillDefault
+    Range("BB2:BB5000").Select
+    Selection.NumberFormat = "0.000000000"
+    Selection.NumberFormat = "0.00"
+    Range("BB1").Select
+    ActiveCell.FormulaR1C1 = "P BS _ "
+    Range("BB2").Select
+    ActiveCell.FormulaR1C1 = "=MIN(0,MAX(-1,RC[-5]-1))"
+    Range("BB2").Select
+    Selection.AutoFill Destination:=Range("BB2:BB5000"), Type:=xlFillDefault
+    Range("BB2:BB5000").Select
+    Columns("BB:BB").Select
+    Selection.NumberFormat = "0.00"
+    Selection.NumberFormat = "0.000"
+    Range("BC2").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("BC2").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("BC2").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("BC2").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("BC2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=MIN(1,MAX(0,(1/SQRT(2*PI()))*EXP(-0.5*RC[-8]*RC[-8])*1/(RC[-27]*RC[-28]*SQRT(RC[-25]))))"
+    Selection.AutoFill Destination:=Range("BC2:BC5000"), Type:=xlFillDefault
+    Range("BC2:BC5000").Select
+    Range("BE1").Select
+    ActiveCell.FormulaR1C1 = "C BS __"
+    Range("BE2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-12]*RC[-54]*2"
+    Range("BE2").Select
+    Selection.AutoFill Destination:=Range("BE2:BE5000"), Type:=xlFillDefault
+    Range("BE2:BE5000").Select
+    Range("BF1").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("BF1").Select
+    ActiveCell.FormulaR1C1 = "P BS __ "
+    Range("BF2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-3]*2*RC[-38]"
+    Range("BF2").Select
+    Selection.AutoFill Destination:=Range("BF2:BF5000"), Type:=xlFillDefault
+    Range("BF2:BF5000").Select
+    Range("BG2").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("BG1").Select
+    ActiveCell.FormulaR1C1 = "SUM BS _ "
+    Range("BG1").Select
+    ActiveCell.FormulaR1C1 = "SUM BS __ "
+    Range("BG2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-2]+RC[-1]"
+    Range("BG2").Select
+    Selection.AutoFill Destination:=Range("BG2:BG5000"), Type:=xlFillDefault
+    Range("BG2:BG5000").Select
+    Range("BH1").Select
+    ActiveCell.FormulaR1C1 = "NET BS __"
+    Range("BH2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-3]-RC[-2]"
+    Range("BH2").Select
+    Selection.AutoFill Destination:=Range("BH2:BH5000"), Type:=xlFillDefault
+    Range("BH2:BH5000").Select
+    Range("Z1").Select
+    ActiveCell.FormulaR1C1 = "C IV"
+    Range("AA1").Select
+    ActiveCell.FormulaR1C1 = "P IV"
+    Range("G2").Select
+    ActiveCell.FormulaR1C1 = "'--"
+    Range("G3").Select
+    Range("AH2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-2]+RC[-1]"
+    Range("AH2").Select
+    Selection.AutoFill Destination:=Range("AH2:AH5000"), Type:=xlFillDefault
+    Range("AH2:AH5000").Select
+    Columns("AE:AE").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("AI:AI").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("AM:AM").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("AQ:AQ").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("AU:AU").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("AY:AY").Select
+    Selection.Delete Shift:=xlToLeft
+    Range("BD1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=SQRT(ABS(R[1]C[-3]))*(R[1]C[-2]/R[1]C[-2]*SQRT(R[1]C[-2]))"
+    Range("BD1").Select
+    Range("BC2").Select
+    ActiveCell.FormulaR1C1 = "=SQRT(ABS(RC[-2]))*(RC[-1]/RC[-1]*SQRT(RC[-1]))"
+    Range("BD1").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("BC1").Select
+    ActiveCell.FormulaR1C1 = "Real _"
+    Range("BC2").Select
+    Selection.AutoFill Destination:=Range("BC2:BC5000"), Type:=xlFillDefault
+    Range("BC2:BC5000").Select
+
+    
+End Sub
